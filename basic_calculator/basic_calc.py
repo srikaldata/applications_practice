@@ -22,3 +22,22 @@ def get_operands():
     return num1, num2
 
 
+# individual operation functions
+def addition(num1, num2):
+    return num1+num2
+
+def subtraction(num1, num2):
+    return num1-num2
+
+def multiplication(num1, num2):
+    return num1*num2
+
+def division(num1, num2):
+    return num1/num2
+
+def modulus(num1, num2):
+    return num1%num2
+
+def power(num1, num2):
+    return num1**num2
+
