@@ -74,3 +74,29 @@ def perform_calculation(op, num1, num2):
         return power(num1, num2)
     
     
+
+# main function for the basic calc
+def basic_calculator():
+    while True:
+            
+        try:
+            # fetching the type of operation to perform from user i/p
+            op = get_operator()
+
+            # if the use chose to quit
+            if op == 'q':
+                print('exiting calculator...')
+                break
+            
+            elif op != 'q' and op not in [1,2,3,4,5,6]:
+                print('please enter a valid option to perform a listed operation or to quit')
+                continue
+            
+            # fetching operands
+            num1, num2 = get_operands()
+            
+            # performing the calculation
+            result = perform_calculation(op, num1, num2)
+            
+            # display the result in stdout 
+            print('The result of the calculation is: ', result)
