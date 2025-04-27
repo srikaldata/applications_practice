@@ -111,3 +111,8 @@ def basic_calculator():
             print('Cannot divide a value by 0.', str(zde))
             continue
             
+        
+# start the calculator after the completion/interruption of every operation
+basic_calculator()
+    
+print('calculator exited')
