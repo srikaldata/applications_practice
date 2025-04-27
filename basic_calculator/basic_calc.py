@@ -100,3 +100,8 @@ def basic_calculator():
             
             # display the result in stdout 
             print('The result of the calculation is: ', result)
+        
+        # catching value errors
+        except ValueError as ve:
+            print('please check the input values you have entered.', str(ve))
+            continue
