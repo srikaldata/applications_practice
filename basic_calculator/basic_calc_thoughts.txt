@@ -1,0 +1,28 @@
+1. Display menu
+    * greeting message
+    * list of operations
+        --> add
+        --> subtract
+        --> multiply
+        --> divide
+        --> modulus
+        --> exponentiate
+    * get user i/p
+        --> handle non-numbers and spaces
+        --> option to quit
+        --> clear / reset
+
+2. inputs
+    * 2 inputs
+        --> i/p validation (alphabets, symbols, spaces)
+
+3. functionality
+    * i/p A with operator and i/p B
+    * return the result
+
+4. main function
+    * 
+
+1st iteration:
+
+        
