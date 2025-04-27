@@ -105,3 +105,9 @@ def basic_calculator():
         except ValueError as ve:
             print('please check the input values you have entered.', str(ve))
             continue
+            
+        # zero division error
+        except ZeroDivisionError as zde:
+            print('Cannot divide a value by 0.', str(zde))
+            continue
+            
