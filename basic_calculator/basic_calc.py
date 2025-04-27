@@ -14,3 +14,11 @@ def get_operator():
     
     return operator
 
+
+# fetching the operands from user input
+def get_operands():
+    num1 = float(input('Enter the val of the first number: '))
+    num2 = float(input('Enter the val of the second number: '))
+    return num1, num2
+
+
