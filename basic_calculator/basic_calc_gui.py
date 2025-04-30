@@ -60,6 +60,10 @@ def perform_calculation():
     # if none of the above 
     else:
         result = 'Please select a valid operation!'
+
+    # method to display the result post calc
+    label_result.config(text=f'Result: {result}')
+    
         
 
 # creating the GUI
@@ -93,3 +97,7 @@ operation_selected_ddmenu.grid(row=2, column=1, pady=8)
 # calculate button
 calculate_btn = tk.Button(text='CALCULATE', command=perform_calculation)
 calculate_btn.grid(row=3, column=0, columnspan=2, pady=12)
+
+# displaying the result
+label_result = tk.Label(root_gui, text="Result: ")
+label_result.grid(row=4, column=0, columnspan=2, pady=8)
