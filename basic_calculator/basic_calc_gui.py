@@ -35,27 +35,27 @@ def perform_calculation():
         op = operation_selected.get()
             
         # addition
-        if int(op) == 'Addition':
+        if op == 'Addition':
             result = addition(num1, num2)
         
         # subtraction
-        elif int(op) == 'Subtraction':
+        elif op == 'Subtraction':
             result = subtraction(num1, num2)
         
         # multiplication
-        elif int(op) == 'Multiplication':
+        elif op == 'Multiplication':
             result = multiplication(num1, num2)
         
         # division
-        elif int(op) == 'Division':
+        elif op == 'Division':
             result = division(num1, num2)
         
         # modulus
-        elif int(op) == 'Modulus':
+        elif op == 'Modulus':
             result = modulus(num1, num2)
         
         # power
-        elif int(op) == 'Power':
+        elif op == 'Power':
             result = power(num1, num2)
         
         # if none of the above 
