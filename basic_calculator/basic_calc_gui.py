@@ -82,11 +82,15 @@ root_gui = tk.Tk()
 root_gui.title('Basic calculator with 6 operations and 2 operands')
 
 # the input section for operands
+# labels for the 1st operand input
+tk.Label(root_gui, text='Enter 1st number:').grid(row=0, column=0, pady=8) 
 # type of gui element for 1st operand
 usr_input_num1 = tk.Entry(root_gui)
 # position of the 1st operand input element in the gui 
 usr_input_num1.grid(row=0, column=1, pady=8)
 
+# labels for the 2nd operand input
+tk.Label(root_gui, text='Enter 2nd number:').grid(row=1, column=0, pady=8)
 # type of gui element for 2nd operand
 usr_input_num2 = tk.Entry(root_gui)
 # position of the 1st operand input element in the gui 
