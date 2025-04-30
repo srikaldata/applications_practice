@@ -26,6 +26,42 @@ def power(num1, num2):
     return num1 ** num2
 
 
+# the main function to calculate and perform the operation
+def perform_calculation():
+    
+    num1 = float(usr_input_num1.get())
+    num2 = float(usr_input_num2.get())
+    op = operation_selected.get()
+        
+    # addition
+    if int(op) == 'Addition':
+        result = addition(num1, num2)
+    
+    # subtraction
+    elif int(op) == 'Subtraction':
+        result = subtraction(num1, num2)
+    
+    # multiplication
+    elif int(op) == 'Multiplication':
+        result = multiplication(num1, num2)
+    
+    # division
+    elif int(op) == 'Division':
+        result = division(num1, num2)
+    
+    # modulus
+    elif int(op) == 'Modulus':
+        result = modulus(num1, num2)
+    
+    # power
+    elif int(op) == 'Power':
+        result = power(num1, num2)
+    
+    # if none of the above 
+    else:
+        result = 'Please select a valid operation!'
+        
+
 # creating the GUI
 
 # instantiating the tk class
@@ -53,3 +89,7 @@ operations_list = ['Addition', 'Subtraction', 'Multiplication', 'Division', 'Mod
 # creating a dropdown menu for letting the user choose the operation
 operation_selected_ddmenu = tk.OptionMenu(root_gui, operation_selected, *operations_list)
 operation_selected_ddmenu.grid(row=2, column=1, pady=8)
+
+# calculate button
+calculate_btn = tk.Button(text='CALCULATE', command=perform_calculation)
+calculate_btn.grid(row=3, column=0, columnspan=2, pady=12)
