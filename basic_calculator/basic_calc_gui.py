@@ -25,3 +25,10 @@ def modulus(num1, num2):
 def power(num1, num2):
     return num1 ** num2
 
+
+# creating the GUI
+
+# instantiating the tk class
+root_gui = tk.Tk()
+root_gui.title('Basic calculator with 6 operations')
+ 
