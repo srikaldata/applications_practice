@@ -29,41 +29,50 @@ def power(num1, num2):
 # the main function to calculate and perform the operation
 def perform_calculation():
     
-    num1 = float(usr_input_num1.get())
-    num2 = float(usr_input_num2.get())
-    op = operation_selected.get()
+    try:
+        num1 = float(usr_input_num1.get())
+        num2 = float(usr_input_num2.get())
+        op = operation_selected.get()
+            
+        # addition
+        if int(op) == 'Addition':
+            result = addition(num1, num2)
         
-    # addition
-    if int(op) == 'Addition':
-        result = addition(num1, num2)
-    
-    # subtraction
-    elif int(op) == 'Subtraction':
-        result = subtraction(num1, num2)
-    
-    # multiplication
-    elif int(op) == 'Multiplication':
-        result = multiplication(num1, num2)
-    
-    # division
-    elif int(op) == 'Division':
-        result = division(num1, num2)
-    
-    # modulus
-    elif int(op) == 'Modulus':
-        result = modulus(num1, num2)
-    
-    # power
-    elif int(op) == 'Power':
-        result = power(num1, num2)
-    
-    # if none of the above 
-    else:
-        result = 'Please select a valid operation!'
+        # subtraction
+        elif int(op) == 'Subtraction':
+            result = subtraction(num1, num2)
+        
+        # multiplication
+        elif int(op) == 'Multiplication':
+            result = multiplication(num1, num2)
+        
+        # division
+        elif int(op) == 'Division':
+            result = division(num1, num2)
+        
+        # modulus
+        elif int(op) == 'Modulus':
+            result = modulus(num1, num2)
+        
+        # power
+        elif int(op) == 'Power':
+            result = power(num1, num2)
+        
+        # if none of the above 
+        else:
+            result = 'Please select a valid operation!'
 
-    # method to display the result post calc
-    label_result.config(text=f'Result: {result}')
+        # method to display the result post calc
+        label_result.config(text=f'Result: {result}')
     
+    # catching value errors
+    except ValueError as ve:
+        messagebox.showerror('Value Error!: ', str(ve))
+    
+    # catching other errors
+    except Exception as e:
+        messagebox.showerror('Error!: ', 'Invalid input(s)! Please check and try again.')
+        
         
 
 # creating the GUI
@@ -84,7 +93,7 @@ usr_input_num2 = tk.Entry(root_gui)
 usr_input_num2.grid(row=1, column=1, pady=8)
 
 # user choosing the operation to be performed
-tk.Label(root, text='Select operation: ').grid(row=2, column=0, pady=8)
+tk.Label(root_gui, text='Select operation: ').grid(row=2, column=0, pady=8)
 operation_selected = tk.StringVar(root_gui)
 # setting the default operation to be performed
 operation_selected.set('Addition') 
