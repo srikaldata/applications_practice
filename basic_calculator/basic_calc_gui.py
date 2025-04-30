@@ -30,5 +30,15 @@ def power(num1, num2):
 
 # instantiating the tk class
 root_gui = tk.Tk()
-root_gui.title('Basic calculator with 6 operations')
- 
+root_gui.title('Basic calculator with 6 operations and 2 operands')
+
+# the input section for operands
+# type of gui element for 1st operand
+usr_input_num1 = tk.Entry(root_gui)
+# position of the 1st operand input element in the gui 
+usr_input_num1.grid(row=0, column=1, pady=8)
+
+# type of gui element for 2nd operand
+usr_input_num2 = tk.Entry(root_gui)
+# position of the 1st operand input element in the gui 
+usr_input_num2.grid(row=1, column=1, pady=8)
