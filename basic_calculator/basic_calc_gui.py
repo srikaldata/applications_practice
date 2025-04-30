@@ -110,3 +110,6 @@ calculate_btn.grid(row=3, column=0, columnspan=2, pady=12)
 # displaying the result
 label_result = tk.Label(root_gui, text="Result: ")
 label_result.grid(row=4, column=0, columnspan=2, pady=8)
+
+# to make the gui persist (run a infinite loop until exit)
+root_gui.mainloop()
