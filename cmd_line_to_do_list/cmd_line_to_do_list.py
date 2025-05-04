@@ -20,3 +20,9 @@ def add_task(task_name, task_description):
     task_list.append([task_name, task_description, 'PENDING'])
     print(f'Task {task_name} is successfully added!')
     save_tasks()
+
+
+# fn to print the existing list of tasks in the command line
+def print_list_of_tasks():
+    for idx, task in enumerate(task_list):
+        print(f"{idx} {' '.join(task)}")
