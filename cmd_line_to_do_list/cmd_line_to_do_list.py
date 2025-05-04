@@ -26,3 +26,20 @@ def add_task(task_name, task_description):
 def print_list_of_tasks():
     for idx, task in enumerate(task_list):
         print(f"{idx} {' '.join(task)}")
+
+
+
+# loading any existing tasks, if any, which exists in tasks.txt
+load_tasks()
+
+# print the tasks in the task_list
+print_list_of_tasks()
+
+# add_task('Buy breakfast', '2 eggs scrambled, orange juice')
+# add_task('Buy lunch', 'greek salad, hummus, pita bread')
+# add_task('Hit the gym', 'cardio: jog 20 mins')
+# add_task('Hit the gym', 'weights: bicep curls, dead lift, bench press')
+# add_task('End of day', 'meditate')
+# add_task('End of day', 'sleep')
+# print(task_list)
+

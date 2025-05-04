@@ -1,0 +1,10 @@
+Buy breakfast||2 eggs scrambled, orange juice||PENDING
+Buy lunch||greek salad, hummus, pita bread||PENDING
+Hit the gym||cardio: jog 20 mins||PENDING
+Hit the gym||weights: bicep curls, dead lift, bench press||PENDING
+End of day||meditate||PENDING
+End of day||sleep||PENDING
+test_task_name||test_task_description||PENDING
+test_task_name_1||test_task_description_1||COMPLETED
+test_task_name_2||test_task_description_2||PENDING
+test_task_name_3||test_task_description_3||IN-PROGRESS
