@@ -37,6 +37,7 @@ def load_tasks():
             task = task.strip().split('||')
             task_list.append(task)
 
+
 # fn to save a task's status update in the txt file
 def save_tasks_status():
     with open('tasks.txt', 'w') as task_file:
@@ -44,6 +45,14 @@ def save_tasks_status():
         for task_name, task_description, task_status in task_list:
             content = f'{task_name}||{task_description}||{task_status}\n'
             task_file.write(content)
+
+
+# to update the status of the task
+def update_task_status(task_index, task_new_status):
+    task = task_list[task_index]
+    task[2] = task_new_status
+    save_tasks_status()
+    print(f'{task[0]} --> task status updated successfully!')
 
 
 # loading any existing tasks, if any, which exists in tasks.txt
