@@ -69,3 +69,19 @@ print_list_of_tasks()
 # add_task('End of day', 'sleep')
 # print(task_list)
 
+# cmd line interface to interact with the to do list:
+# check if the second element is 'add' and if the num of elems is 4 (for validation)
+if sys.argv[1] == 'add' and len(sys.argv) == 4:
+    task_name, task_description = sys.argv[2], sys.argv[3]
+    add_task(task_name, task_description)
+    
+elif sys.argv[1] == 'list':
+    load_tasks()
+    print_list_of_tasks()
+    task_list= []
+
+elif sys.argv[1] == 'update' and len(sys.argv) == 4:
+    load_tasks()
+    task_index, task_status = int(sys.argv[2]), sys.argv[3]
+    update_task_status(task_index, task_status)
+ 
