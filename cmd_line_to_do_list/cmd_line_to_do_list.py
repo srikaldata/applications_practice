@@ -28,6 +28,16 @@ def print_list_of_tasks():
         print(f"{idx} {' '.join(task)}")
 
 
+# fn to load existing tasks from the txt file into the memory
+def load_tasks():
+    with open('tasks.txt', 'r') as task_file:
+        tasks = task_file.readlines()
+
+        for task in tasks:
+            task = task.strip().split('||')
+            task_list.append(task)
+
+
 
 # loading any existing tasks, if any, which exists in tasks.txt
 load_tasks()
