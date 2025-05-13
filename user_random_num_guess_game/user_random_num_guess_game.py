@@ -64,6 +64,7 @@ def get_difficulty_level():
     user_difficulty_level = int(input('Enter your preferred difficulty level: '))
     return user_difficulty_level
 
+
 # getting user choice to replay the game or not
 def game_replay_user_ip():
     user_choice = input('Do you want to replay the game? [yes/no]: ')
@@ -71,3 +72,26 @@ def game_replay_user_ip():
         main()
     else:
         print('Thanks for playing the game. See you again!')
+
+
+# playing the game
+def play(random_num, max_attempts):
+    status = False
+    attempts = 0
+    
+    while not status:
+        
+        # when number of attempts exceeds the max attempts made
+        if attempts > max_attempts:
+            print('You have exceeded MAXIMUM NUM OF ATTEMPTS. Replay the game!')
+            game_replay_user_ip()
+            break
+        
+        attempts += 1
+        user_ip = get_user_input()
+        status = compare_ip_randnum(user_ip, random_num)
+        
+        # when the answer is found leaderboard is generated
+        if status == True:
+            save_leaderboard(attempts)
+
