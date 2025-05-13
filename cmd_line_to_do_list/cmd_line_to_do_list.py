@@ -84,4 +84,3 @@ elif sys.argv[1] == 'update' and len(sys.argv) == 4:
     load_tasks()
     task_index, task_status = int(sys.argv[2]), sys.argv[3]
     update_task_status(task_index, task_status)
- 
