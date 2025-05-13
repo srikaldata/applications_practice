@@ -95,3 +95,10 @@ def play(random_num, max_attempts):
         if status == True:
             save_leaderboard(attempts)
 
+
+# saving the score to leaderboard
+def save_leaderboard(num_attempts):
+    name = input('Please enter your name for leaderboard: ')
+    with open('guess_game_leaderboard.txt', 'a') as file:
+        file.write(f'{name}||{1000 - ((num_attempts-1)*100)}\n')
+    print('score successfully added to leaderboard')
