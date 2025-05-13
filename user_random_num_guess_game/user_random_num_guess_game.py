@@ -121,3 +121,12 @@ def main():
     random_num, max_attempts = generate_random_num(user_difficulty_level)
     play(random_num, max_attempts)
     game_replay_user_ip()
+
+
+# condition to whether play the game or to list the leaderboard
+if __name__ == '__main__':
+    if len(sys.argv) > 1 and sys.argv[1] == 'list':
+        list_leaderboard()
+    else:
+        main()
+        
