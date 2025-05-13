@@ -31,3 +31,24 @@ def generate_random_num(user_difficulty_level):
 def get_user_input():
     curr_user_ip = int(input('Enter your guess: '))
     return curr_user_ip
+
+
+# compare the user input and the random number generated
+def compare_ip_randnum(user_ip, random_num):
+    
+    status = False
+    
+    # if the number guessed is higher than target
+    if user_ip > random_num:
+        print('Your guess is HIGHER!')
+    
+    # if the number guessed is lower than target
+    elif user_ip < random_num:
+        print('Your guess is LOWER!')
+        
+    # when the number guessed is correct
+    elif user_ip == random_num:
+        print('You have correctly guessed. YOU WIN!')
+        status = True
+    
+    return status
