@@ -63,3 +63,11 @@ def get_difficulty_level():
           ''')
     user_difficulty_level = int(input('Enter your preferred difficulty level: '))
     return user_difficulty_level
+
+# getting user choice to replay the game or not
+def game_replay_user_ip():
+    user_choice = input('Do you want to replay the game? [yes/no]: ')
+    if user_choice == 'yes':
+        main()
+    else:
+        print('Thanks for playing the game. See you again!')
