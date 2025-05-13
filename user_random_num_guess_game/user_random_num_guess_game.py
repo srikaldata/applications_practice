@@ -102,3 +102,13 @@ def save_leaderboard(num_attempts):
     with open('guess_game_leaderboard.txt', 'a') as file:
         file.write(f'{name}||{1000 - ((num_attempts-1)*100)}\n')
     print('score successfully added to leaderboard')
+
+
+# printing the leaderboard in the console
+def list_leaderboard():
+    with open('guess_game_leaderboard.txt', 'a') as file:
+        winners = file.readlines()
+    result = {}
+    for person in winners:
+        name, score = person.split('||')
+        print(name, score)
