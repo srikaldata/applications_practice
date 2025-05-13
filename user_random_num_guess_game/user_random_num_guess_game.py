@@ -112,3 +112,12 @@ def list_leaderboard():
     for person in winners:
         name, score = person.split('||')
         print(name, score)
+
+
+# main function that performs all the functions
+def main():
+    welcome_message()
+    user_difficulty_level = get_difficulty_level()
+    random_num, max_attempts = generate_random_num(user_difficulty_level)
+    play(random_num, max_attempts)
+    game_replay_user_ip()
