@@ -52,3 +52,14 @@ def compare_ip_randnum(user_ip, random_num):
         status = True
     
     return status
+
+
+# get the difficulty level from the user
+def get_difficulty_level():
+    print('''Choose difficulty level: \n
+          1: Easy: guess between 1 and 50 \n
+          2: Medium: guess between 1 and 100 \n
+          3: Hard: guess between 1 and 1000                
+          ''')
+    user_difficulty_level = int(input('Enter your preferred difficulty level: '))
+    return user_difficulty_level
