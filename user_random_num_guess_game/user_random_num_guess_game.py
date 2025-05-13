@@ -25,3 +25,9 @@ def generate_random_num(user_difficulty_level):
     else:
         num, max_attempts = random.randint(1, 100), 7
     return num, max_attempts
+
+
+# get the user input
+def get_user_input():
+    curr_user_ip = int(input('Enter your guess: '))
+    return curr_user_ip
