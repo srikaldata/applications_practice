@@ -31,3 +31,8 @@ def countdown_timer(minutes):
         time.sleep(1)
         total_seconds -= 1
 
+
+# system notification after the the timer ends  
+def notify(msg):
+    notification.notify(title = 'Pomodoro Timer', message = msg, timeout = 5)
+
