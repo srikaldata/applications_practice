@@ -27,11 +27,6 @@ def generate_random_num(user_difficulty_level):
     return num, max_attempts
 
 
-# get the user input
-def get_user_input():
-    curr_user_ip = int(input('Enter your guess: '))
-    return curr_user_ip
-
 
 # compare the user input and the random number generated
 def compare_ip_randnum(user_ip, random_num):
@@ -56,19 +51,28 @@ def compare_ip_randnum(user_ip, random_num):
 
 # get the difficulty level from the user
 def get_difficulty_level():
-    print('''Choose difficulty level: \n
-          1: Easy: guess between 1 and 50 \n
-          2: Medium: guess between 1 and 100 \n
-          3: Hard: guess between 1 and 1000                
-          ''')
-    user_difficulty_level = int(input('Enter your preferred difficulty level: '))
-    return user_difficulty_level
-
+    
+    while True:
+        
+        print('''Choose difficulty level: \n
+            1: Easy: guess between 1 and 50 \n
+            2: Medium: guess between 1 and 100 \n
+            3: Hard: guess between 1 and 1000                
+            ''')
+        
+        try:
+            user_difficulty_level = int(input('Enter your preferred difficulty level: '))
+            if user_difficulty_level in [1, 2, 3]:
+                return user_difficulty_level
+            else:
+                print('Please enter 1, 2, or 3.')
+        except ValueError:
+            print('Invalid input. Please enter an integer: 1 or 2 or 3')
 
 # getting user choice to replay the game or not
 def game_replay_user_ip():
     user_choice = input('Do you want to replay the game? [yes/no]: ')
-    if user_choice == 'yes':
+    if user_choice in ['yes', 'Yes', 'YES', 'y', 'Y'] :
         main()
     else:
         print('Thanks for playing the game. See you again!')
@@ -88,7 +92,7 @@ def play(random_num, max_attempts):
             break
         
         attempts += 1
-        user_ip = get_user_input()
+        user_ip = get_user_input(max_attempts)
         status = compare_ip_randnum(user_ip, random_num)
         
         # when the answer is found leaderboard is generated
