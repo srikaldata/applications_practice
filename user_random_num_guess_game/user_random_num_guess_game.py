@@ -27,6 +27,29 @@ def generate_random_num(user_difficulty_level):
     return num, max_attempts
 
 
+# get the user input
+def get_user_input(max_attempts):
+    while True:
+            
+        try:
+            curr_user_ip = int(input(f'Enter your guess: '))
+            if max_attempts == 5 and (1 <= curr_user_ip <= 50):
+                return curr_user_ip
+            elif max_attempts == 7 and (1 <= curr_user_ip <= 100):
+                return curr_user_ip
+            elif max_attempts == 10 and (1 <= curr_user_ip <= 1000):
+                return curr_user_ip
+            else:
+                map_values = lambda x: {5: 50, 7: 100, 10: 1000}.get(x, 0)
+                print(f'Error: Please enter a number between 1 and {map_values(max_attempts)}.')
+        except ValueError:
+            print('Error: Please enter valid integer numbers')
+        except TypeError:
+            print('Error: Please enter an integer')
+        except Exception as e:
+            print(f'An unexpected error occurred: {e}')
+            
+
 
 # compare the user input and the random number generated
 def compare_ip_randnum(user_ip, random_num):
