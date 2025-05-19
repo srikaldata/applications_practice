@@ -67,3 +67,21 @@ def pomodoro_timer(tasks):
             
         cycles += 1
     
+
+# fn to get task 
+def get_tasks():
+    is_task = True
+    tasks = []
+    
+    while is_task:
+            
+        task = input('Enter you task name: ')
+        tasks.append(task)
+        
+        any_more_task = input('Do you wish to add more tasks? (yes / no): ')
+        
+        if any_more_task.strip().lower() in ['no', 'n']:
+            is_task = False
+    
+    return tasks
+            
