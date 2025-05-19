@@ -13,3 +13,8 @@ DEFAULT_SHORT_BREAK_TIME_MINS = 5
 DEFAULT_LONG_BREAK_TIME_MINS = 5
 DEFAULT_CYCLES_FOR_LONG_BREAK = 3
 
+
+# function to clear the terminal window
+def clear_window():
+    os.system('cls')
+
