@@ -36,3 +36,34 @@ def countdown_timer(minutes):
 def notify(msg):
     notification.notify(title = 'Pomodoro Timer', message = msg, timeout = 5)
 
+
+# the pomodoro timer major function 
+def pomodoro_timer(tasks):
+    
+    cycles = 1
+    task_counter = 0
+    
+    # keep repeating
+    while cycles <= len(tasks):
+        clear_window()
+        print(f'***Pomodoro Session for {tasks[task_counter]} Started***')
+        countdown_timer(DEFAULT_POMODORO_TIMER_MINS)
+        
+        # short break condition
+        if cycles < DEFAULT_CYCLES_FOR_LONG_BREAK:
+            clear_window()
+            notify('***SHORT break started***')
+            print('***SHORT break started***')
+            countdown_timer(DEFAULT_SHORT_BREAK_TIME_MINS)
+            task_counter += 1
+        
+        # long break condition
+        else:
+            clear_window()
+            notify('***LONG break started***')
+            print('***LONG break started***')
+            countdown_timer(DEFAULT_LONG_BREAK_TIME_MINS)
+            task_counter += 1
+            
+        cycles += 1
+    
