@@ -85,3 +85,12 @@ def get_tasks():
     
     return tasks
             
+
+# main fn 
+def main():
+    tasks = get_tasks()
+    pomodoro_timer(tasks)
+
+if __name__ == '__main__':
+    main()
+    
