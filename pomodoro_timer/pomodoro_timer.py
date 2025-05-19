@@ -18,3 +18,16 @@ DEFAULT_CYCLES_FOR_LONG_BREAK = 3
 def clear_window():
     os.system('cls')
 
+
+# fn for the countdown timer
+def countdown_timer(minutes):
+    total_seconds = minutes * 60
+    total_seconds = 5
+    
+    while total_seconds:
+        current_min = total_seconds // 60
+        current_sec =  total_seconds % 60
+        print(f'\rTime left: {current_min:02d}:{current_sec:02d}', end='')
+        time.sleep(1)
+        total_seconds -= 1
+
