@@ -30,3 +30,7 @@ class Patron(ABC):
             book.return_book()
             self.borrowed_books.remove(book)
     
+    # display the info of the patron
+    def display_info(self):
+        print(f'{self.name} (ID: {self.patron_id}) - Borrowed books: {[b.title for b in self.borrowed_books]}')
+
