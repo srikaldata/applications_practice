@@ -34,3 +34,19 @@ class Patron(ABC):
     def display_info(self):
         print(f'{self.name} (ID: {self.patron_id}) - Borrowed books: {[b.title for b in self.borrowed_books]}')
 
+
+# inheriting Patron (parent) class within Student (child) class  
+class Student(Patron):
+    
+    # making the abstract method concrete post inheritance
+    def max_books_allowed(self):
+        return 3
+
+
+# inheriting Patron (parent) class within Faculty (child) class        
+class Faculty(Patron):
+    
+    # making the abstract method concrete after inheritance
+    def max_books_allowed(self):
+        return 5
+            
