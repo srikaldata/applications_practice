@@ -10,3 +10,9 @@ class Patron(ABC):
         self.name = name 
         self.patron_id = patron_id
         self.borrowed_books = []
+        
+    # abstraction in parent fn --> must define this fn in the child fn    
+    @abstractmethod
+    def max_books_allowed(self):
+        pass
+        
