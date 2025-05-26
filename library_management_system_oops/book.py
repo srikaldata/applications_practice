@@ -23,3 +23,8 @@ class Book:
         self.available = True
         self.borrower = None
     
+    # dunder / magic method for printing the object     
+    def __str__(self):
+        status = 'Available' if self.available else f'Borrowed by {self.borrower}'
+        return f'{self.title} by {self.author} | ISBN: {self.isbn} | {status}' 
+    
