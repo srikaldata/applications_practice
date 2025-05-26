@@ -17,3 +17,9 @@ class Book:
             self.borrower = patron_id
             return True
         return False
+    
+    # method to return the book and make the book available
+    def return_book(self):
+        self.available = True
+        self.borrower = None
+    
