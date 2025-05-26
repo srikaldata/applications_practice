@@ -42,3 +42,11 @@ class Student(Patron):
     def max_books_allowed(self):
         return 3
 
+
+# inheriting Patron (parent) class within Faculty (child) class        
+class Faculty(Patron):
+    
+    # making the abstract method concrete after inheritance
+    def max_books_allowed(self):
+        return 5
+            
