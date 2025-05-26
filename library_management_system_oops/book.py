@@ -9,3 +9,11 @@ class Book:
         self.isbn = isbn
         self.available = True
         self.borrower = None
+        
+    # method to check availability and borrow the book    
+    def borrow_book(self, patron_id):
+        if self.available:
+            self.available = False
+            self.borrower = patron_id
+            return True
+        return False
