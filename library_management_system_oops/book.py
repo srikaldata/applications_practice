@@ -28,3 +28,8 @@ class Book:
         status = 'Available' if self.available else f'Borrowed by {self.borrower}'
         return f'{self.title} by {self.author} | ISBN: {self.isbn} | {status}' 
     
+    
+# testing the Book  class
+if __name__ =='__main__':
+    book = Book(title = 'Eat That Frog', author = 'Brian Tracy', isbn = '9780070659582')
+    print(book)
