@@ -15,4 +15,12 @@ class Patron(ABC):
     @abstractmethod
     def max_books_allowed(self):
         pass
-        
+
+    # method for borrowing a book
+    def borrow_book(self, book):
+        if len(self.borrowed_books) < self.max_books_allowed():
+            if book.borrow_book(self.patron_id):
+                self.borrowed_books.append(book)
+                return True
+        return False
+    
