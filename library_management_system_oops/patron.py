@@ -23,4 +23,10 @@ class Patron(ABC):
                 self.borrowed_books.append(book)
                 return True
         return False
+
+    # method to return book 
+    def return_book(self, book):
+        if book in self.borrowed_books:
+            book.return_book()
+            self.borrowed_books.remove(book)
     
