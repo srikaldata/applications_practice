@@ -27,3 +27,10 @@ class Library:
     # method to find the patron in the library
     def find_patron(self, patron_id):
         return next((p for p in self.patrons_current if p.patron_id == patron_id))
+    
+    # method to issue the book 
+    def issue_book(self, patron_id, isbn):
+        book = self.find_book(isbn)
+        patron = self.find_patron(patron_id)
+        if book and patron:
+            return patron.borrow_book()
