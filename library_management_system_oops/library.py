@@ -19,3 +19,7 @@ class Library:
             self.patrons_current.append(Faculty(name, patron_id))
         elif patron_type == 'student':
             self.patrons_current.append(Student(name, patron_id))
+        
+    # method to find the name of the book when isbn is given
+    def find_book(self, isbn):
+        return next((b for b in self.books_shelf if b.isbn == isbn))
