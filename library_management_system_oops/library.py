@@ -34,3 +34,11 @@ class Library:
         patron = self.find_patron(patron_id)
         if book and patron:
             return patron.borrow_book()
+        
+    # method to return the book to the library shelf
+    def return_book(self, patron_id, isbn):
+        patron = self.find_patron(patron_id)
+        book = self.find_book(isbn)
+        if book and patron:
+            patron.return_book(book)
+
