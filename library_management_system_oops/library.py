@@ -42,3 +42,10 @@ class Library:
         if book and patron:
             patron.return_book(book)
 
+
+if __name__ == '__main__':
+    library = Library()
+    library.add_book(title = 'Thinking In Bets', author = 'Annie Duke', isbn = '9780735216372')
+    
+    print(library.find_book('9780735216372'))
+ 
