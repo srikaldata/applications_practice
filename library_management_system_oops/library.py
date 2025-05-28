@@ -8,3 +8,8 @@ class Library:
     def __init__(self):
         self.books_shelf = []
         self.patrons_current = []
+        
+    # method to add book to the library shelf
+    def add_book(self, title, author, isbn):
+        self.books_shelf.append(Book(title, author, isbn))
+ 
