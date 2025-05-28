@@ -23,3 +23,7 @@ class Library:
     # method to find the name of the book when isbn is given
     def find_book(self, isbn):
         return next((b for b in self.books_shelf if b.isbn == isbn))
+    
+    # method to find the patron in the library
+    def find_patron(self, patron_id):
+        return next((p for p in self.patrons_current if p.patron_id == patron_id))
