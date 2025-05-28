@@ -12,4 +12,10 @@ class Library:
     # method to add book to the library shelf
     def add_book(self, title, author, isbn):
         self.books_shelf.append(Book(title, author, isbn))
- 
+       
+    # method to add patron 
+    def add_patron(self, name, patron_id, patron_type='student'):
+        if patron_type == 'faculty':
+            self.patrons_current.append(Faculty(name, patron_id))
+        elif patron_type == 'student':
+            self.patrons_current.append(Student(name, patron_id))
