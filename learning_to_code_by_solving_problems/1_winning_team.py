@@ -30,3 +30,18 @@ elif app_total < ban_total:
     print('B')
 else:
     print('T')
+
+# converting the code into a funtion
+def find_the_winner(app_3,app_2,app_1,ban_3,ban_2,ban_1):
+    
+    # calculate total pts
+    app_total = app_3 * 3 + app_2 * 2 + app_1 * 1
+    ban_total = ban_3 * 3 + ban_2 * 2 + ban_1 * 1
+
+    # determining the winner
+    if app_total > ban_total:
+        return 'A'
+    elif app_total < ban_total:
+        return 'B'
+    else:
+        return 'T'
