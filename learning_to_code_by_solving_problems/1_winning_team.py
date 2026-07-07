@@ -7,7 +7,7 @@
 # num succ 1 pt bananas
 
 # output:
-# A or B
+# A or B or T for tie
 
 
 # get the inputs
@@ -22,3 +22,11 @@ ban_1 = int(input())
 # calculate total pts
 app_total = app_3 * 3 + app_2 * 2 + app_1 * 1
 ban_total = ban_3 * 3 + ban_2 * 2 + ban_1 * 1
+
+# determining the winner
+if app_total > ban_total:
+    print('A')
+elif app_total < ban_total:
+    print('B')
+else:
+    print('T')
