@@ -18,3 +18,7 @@ app_1 = int(input())
 ban_3 = int(input())
 ban_2 = int(input())
 ban_1 = int(input())
+
+# calculate total pts
+app_total = app_3 * 3 + app_2 * 2 + app_1 * 1
+ban_total = ban_3 * 3 + ban_2 * 2 + ban_1 * 1
