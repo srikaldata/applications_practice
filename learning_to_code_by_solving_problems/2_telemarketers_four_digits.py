@@ -7,3 +7,9 @@ num_1 = int(input('digit 1:'))
 num_2 = int(input('digit 2:'))
 num_3 = int(input('digit 3:'))
 num_4 = int(input('digit 4:'))
+
+# conditions to verify
+if num_1 in [8,9] and num_4 in [8,9] and num_3 in list(range(10)) and num_3 in list(range(10)):
+    print('ignore the call')
+else:
+    print('answer the call')
