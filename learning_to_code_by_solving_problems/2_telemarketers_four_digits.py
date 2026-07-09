@@ -29,3 +29,18 @@ else:
         print('ignore the call')
     else:
         print('answer the call')
+
+# function to decide whether to answer the call or not
+def answer_or_ignore_call(num_1, num_2, num_3, num_4):
+    inputs = [num_1, num_2, num_3, num_4]
+    if any(not isinstance(n,int) or n<0 or n>9 for n in inputs):
+        print('Invalid input: nums must be in single digit, non-negative ints')
+    else:
+        if num_1 in [8,9] and num_4 in [8,9] and num_3 in list(range(10)) and num_3==num_2:
+            print('ignore the call')
+        else:
+            print('answer the call')
+
+# calling the fn
+answer_or_ignore_call(num_1, num_2, num_3, num_4)
+
