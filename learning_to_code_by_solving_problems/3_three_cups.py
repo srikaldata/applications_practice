@@ -24,3 +24,20 @@ for swap in swap_order:
 
 # print the final position
 print(position)
+
+# function to perform the swap cups trick
+def swap_cups_trick(swap_order, position):
+    for swap in swap_order:
+        if position == 1 and swap == 'A':
+            position=2
+        if position == 1 and swap == 'C':
+            position=3
+        if  position == 2 and swap == 'A':
+            position=1
+        if  position == 2 and swap == 'B':
+            position=3
+        if  position == 3 and swap == 'B':
+            position=2
+        if  position == 3 and swap == 'C':
+            position=1
+    return position
