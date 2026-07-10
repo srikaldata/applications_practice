@@ -27,27 +27,27 @@ for swap in swap_order:
 print(position)
 
 # function to perform the swap cups trick
-def swap_cups_trick(swap_order, position):
-    for swap in swap_order:
-        if position == 1 and swap == 'A':
-            position=2
-        if position == 1 and swap == 'C':
-            position=3
-        if  position == 2 and swap == 'A':
-            position=1
-        if  position == 2 and swap == 'B':
-            position=3
-        if  position == 3 and swap == 'B':
-            position=2
-        if  position == 3 and swap == 'C':
-            position=1
-    return position
+# def swap_cups_trick(swap_order, position):
+#     for swap in swap_order:
+#         if position == 1 and swap == 'A':
+#             position=2
+#         if position == 1 and swap == 'C':
+#             position=3
+#         if  position == 2 and swap == 'A':
+#             position=1
+#         if  position == 2 and swap == 'B':
+#             position=3
+#         if  position == 3 and swap == 'B':
+#             position=2
+#         if  position == 3 and swap == 'C':
+#             position=1
+#     return position
 
 # checking if the input is a string and one of abc
 def swap_cups_trick(swap_order, position):
     # validation
     if not isinstance(swap_order, str) or not set(swap_order).issubset({'A', 'B', 'C'}):
-        print("Please provide a valid string containing only 'A', 'B', and 'C'.")
+        print("Please provide a valid string containing only 'A' 'B' or 'C'.")
         return None
     
     # conditional classification to find final position
@@ -66,3 +66,9 @@ def swap_cups_trick(swap_order, position):
             if  position == 3 and swap == 'C':
                 position=1
         return position
+
+# testing the function using different inputs
+swap_cups_trick('ABC', position)
+swap_cups_trick('abcD', position)
+swap_cups_trick(123, position)
+swap_cups_trick(True, position)
