@@ -7,7 +7,7 @@
 
 # getting the inputs
 num_spaces = int(input("num of spaces: "))
-parking_pattern_both_days = input("today's parking pattern: ") + input("yesterday's parking pattern: ")
+parking_pattern_both_days = input("today's parking pattern: ")[:3] + input("yesterday's parking pattern: ")[:3]
 
 # looping through each patterns to find occupied spaces on both days
 total_parked_count=0
@@ -45,3 +45,12 @@ def total_parked_spaces(parking_pattern_both_days):
     return total_parked_count
 
 print(total_parked_spaces(parking_pattern_both_days))
+
+# testing different cases
+print()
+print('TESTING:')
+print(total_parked_spaces('CC..C.C....C.C..'))
+print(total_parked_spaces('C.c'))
+print(total_parked_spaces('2C'))
+print(total_parked_spaces('..a'))
+print(total_parked_spaces('C,'))
