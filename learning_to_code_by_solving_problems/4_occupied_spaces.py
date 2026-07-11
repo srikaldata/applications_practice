@@ -16,3 +16,7 @@ for char in parking_pattern_both_days:
         total_parked_count +=1
         
 print(total_parked_count)
+
+# finding out other ways to count
+total_parked_count=0
+print(parking_pattern_both_days.count('C'))
