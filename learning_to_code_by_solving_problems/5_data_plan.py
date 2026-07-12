@@ -54,3 +54,11 @@ data_plan(100, 9)
 # another logic to calculate data plan
 # calculate total available data first
 total_available_data = (num_months+1) * monthly_data_mb
+
+# initializing the remaining data 
+remaining_data=0
+
+# loop through and reduce the data usage for each month
+for _ in range(num_months):
+    data_used = int(input('data used in this month in MB: '))
+    total_available_data -= data_used
