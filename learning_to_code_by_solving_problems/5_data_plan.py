@@ -7,3 +7,7 @@
 
 # output:
 # data in MB remaining and available for next month
+
+# fetching the inputs
+monthly_data_mb = int(input('monthly data in MB: '))
+num_months = int(input('number of months: '))
