@@ -61,4 +61,8 @@ for _ in range(num_months):
     
     if data_used < total_available_data:
         total_available_data -= data_used
+    
+    else:
+        'ERROR: the data used cannot exceed the remaining total available data'
         
+print('total data remaining: ', total_available_data, 'MB')
