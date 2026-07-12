@@ -18,3 +18,4 @@ remaining_data = 0
 # looping through the num of months to get the data used in each month
 for _ in range(num_months):
     used_data = int(input('data used this month in MB: '))
+    remaining_data = monthly_data_mb + remaining_data - used_data 
