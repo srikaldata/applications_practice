@@ -21,8 +21,11 @@ for _ in range(num_months):
     used_data = int(input('data used this month in MB: '))
     
     # making sure if the used data doesnt exceed remaining data 
-    if not(used_data > (monthly_data_mb+remaining_data)): 
+    if used_data < (monthly_data_mb+remaining_data): 
         remaining_data = monthly_data_mb + remaining_data - used_data
         print('remaining data:', remaining_data, 'MB')
+    else:
+        print('ERROR: used data cannot exceed remaining data')
+        break
 
 print('Final remaining_data:', remaining_data)
