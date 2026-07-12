@@ -1,8 +1,8 @@
 # data plan with monthly carryover. find total data available currently
 
 # inputs: 
-# x --> data in MB per month
-# n --> number of months 
+# data in MB per month
+# number of months 
 # set of lines with data usage per month in MB for each of the n months
 
 # output:
@@ -66,3 +66,20 @@ for _ in range(num_months):
         'ERROR: the data used cannot exceed the remaining total available data'
         
 print('total data remaining: ', total_available_data, 'MB')
+
+# wrapping up in a function and testing diff inputs
+def data_plan_all_month_prepaid(monthly_data_mb, num_months):
+    # calculate total available data first
+    total_available_data = (num_months+1) * monthly_data_mb
+
+    # loop through and reduce the data usage for each month 
+    for _ in range(num_months):
+        data_used = int(input('data used in this month in MB: '))
+        
+        if data_used < total_available_data:
+            total_available_data -= data_used
+        
+        else:
+            'ERROR: the data used cannot exceed the remaining total available data'
+            
+    print('total data remaining: ', total_available_data, 'MB')
