@@ -50,3 +50,7 @@ def data_plan(monthly_data_mb, num_months):
 data_plan(20, 5)
 data_plan(200, 3)
 data_plan(100, 9)
+
+# another logic to calculate data plan
+# calculate total available data first
+total_available_data = (num_months+1) * monthly_data_mb
