@@ -51,14 +51,14 @@ data_plan(20, 5)
 data_plan(200, 3)
 data_plan(100, 9)
 
-# another logic to calculate data plan
+# another logic to calculate data plan if it is prepaid plan with option to max out data usage for all months in the same month
 # calculate total available data first
 total_available_data = (num_months+1) * monthly_data_mb
 
-# initializing the remaining data 
-remaining_data=0
-
-# loop through and reduce the data usage for each month
+# loop through and reduce the data usage for each month 
 for _ in range(num_months):
     data_used = int(input('data used in this month in MB: '))
-    total_available_data -= data_used
+    
+    if data_used < total_available_data:
+        total_available_data -= data_used
+        
