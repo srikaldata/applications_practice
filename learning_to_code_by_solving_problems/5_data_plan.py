@@ -17,5 +17,12 @@ remaining_data = 0
 
 # looping through the num of months to get the data used in each month
 for _ in range(num_months):
+    print('remaining_data from previous month:', remaining_data, 'MB')
     used_data = int(input('data used this month in MB: '))
-    remaining_data = monthly_data_mb + remaining_data - used_data 
+    
+    # making sure if the used data doesnt exceed remaining data 
+    if not(used_data > (monthly_data_mb+remaining_data)): 
+        remaining_data = monthly_data_mb + remaining_data - used_data
+        print('remaining data:', remaining_data, 'MB')
+
+print('Final remaining_data:', remaining_data)
