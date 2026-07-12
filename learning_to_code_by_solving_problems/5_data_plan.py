@@ -11,3 +11,10 @@
 # fetching the inputs
 monthly_data_mb = int(input('monthly data in MB: '))
 num_months = int(input('number of months: '))
+
+# initializing the final data remaining
+remaining_data = 0
+
+# looping through the num of months to get the data used in each month
+for _ in range(num_months):
+    used_data = int(input('data used this month in MB: '))
