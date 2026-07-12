@@ -45,3 +45,8 @@ def data_plan(monthly_data_mb, num_months):
             break
 
     print('Final remaining_data:', remaining_data)
+
+# testing the function with different inputs
+data_plan(20, 5)
+data_plan(200, 3)
+data_plan(100, 9)
