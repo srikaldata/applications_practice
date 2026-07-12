@@ -83,3 +83,7 @@ def data_plan_all_month_prepaid(monthly_data_mb, num_months):
             'ERROR: the data used cannot exceed the remaining total available data'
             
     print('total data remaining: ', total_available_data, 'MB')
+
+data_plan_all_month_prepaid(20, 5)
+data_plan_all_month_prepaid(200, 3)
+data_plan_all_month_prepaid(100, 9)
