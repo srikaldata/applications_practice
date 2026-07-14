@@ -27,3 +27,9 @@ while num_quarters >= 1:
         if first_m_plays == 35:
             num_quarters += 30
             first_m_plays=0
+            
+    elif machine == 2:
+        second_m_plays +=1
+        if second_m_plays == 100:
+            num_quarters += 60
+            second_m_plays=0
