@@ -40,3 +40,9 @@ while num_quarters >= 1:
             num_quarters += 9
             third_m_plays=0
     
+    num_plays += 1
+    machine += 1
+    if machine == 4:
+        machine=1
+
+print(num_plays, 'until the player goes broke')
