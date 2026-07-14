@@ -49,6 +49,9 @@ print(num_plays, 'plays until the player goes broke')
 
 #  wrapping the code logic in a function
 def plays_until_broke(num_quarters,first_m_plays, second_m_plays, third_m_plays):
+    machine = 1
+    num_plays = 0
+    
     while num_quarters >= 1:
         num_quarters -= 1
         
@@ -77,3 +80,9 @@ def plays_until_broke(num_quarters,first_m_plays, second_m_plays, third_m_plays)
             machine=1
 
     print(num_plays, 'plays until the player goes broke')
+
+
+# testing different values in the fn
+plays_until_broke(100, 2, 4, 5)
+plays_until_broke(100000, 2, 4, 5)
+plays_until_broke(1, 2, 4, 5)
