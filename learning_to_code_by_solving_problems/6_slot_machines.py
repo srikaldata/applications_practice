@@ -45,4 +45,35 @@ while num_quarters >= 1:
     if machine == 4:
         machine=1
 
-print(num_plays, 'until the player goes broke')
+print(num_plays, 'plays until the player goes broke')
+
+#  wrapping the code logic in a function
+def plays_until_broke(num_quarters,first_m_plays, second_m_plays, third_m_plays):
+    while num_quarters >= 1:
+        num_quarters -= 1
+        
+        # when playing in the first machine:
+        if machine == 1:
+            first_m_plays +=1
+            if first_m_plays == 35:
+                num_quarters += 30
+                first_m_plays=0
+                
+        elif machine == 2:
+            second_m_plays +=1
+            if second_m_plays == 100:
+                num_quarters += 60
+                second_m_plays=0
+                
+        elif machine == 3:
+            third_m_plays +=1
+            if third_m_plays == 10:
+                num_quarters += 9
+                third_m_plays=0
+        
+        num_plays += 1
+        machine += 1
+        if machine == 4:
+            machine=1
+
+    print(num_plays, 'plays until the player goes broke')
