@@ -33,3 +33,10 @@ while num_quarters >= 1:
         if second_m_plays == 100:
             num_quarters += 60
             second_m_plays=0
+            
+    elif machine == 3:
+        third_m_plays +=1
+        if third_m_plays == 10:
+            num_quarters += 9
+            third_m_plays=0
+    
