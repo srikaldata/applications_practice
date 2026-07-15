@@ -31,6 +31,10 @@ print(result)
 
 # wrapping the logic in a fn
 def decode_sentence(sentence):
+    
+    result = ''
+    char_idx = 0
+    
     while char_idx< len(sentence):
     
         # adding each char to result
@@ -46,3 +50,9 @@ def decode_sentence(sentence):
 
     print(result)
 
+# testing the fn on different use cases
+decode_sentence('hepellopo woporld')
+decode_sentence('whapat aparepe yopoupu dopoiping?')
+decode_sentence('hopow aparepe yopoupu?')
+decode_sentence('whapats upup chapat')
+decode_sentence('rhythm')
