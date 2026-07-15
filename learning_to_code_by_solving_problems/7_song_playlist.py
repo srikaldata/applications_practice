@@ -12,11 +12,11 @@ songs_order = 'ABCDE'
 button =0
 
 # looping through different songs based on user input
-while button != 4:
+while button != 4 and button < 4 and button > -1 :
     button = int(input('enter the button number: '))
-    presses= int(input('presses: '))
+    num_presses= int(input('num of times the button needs to be pressed: '))
     
-    for _ in range(presses):
+    for _ in range(num_presses):
         if button == 1:
             print('you have pressed button 1')
             songs_order=songs_order[1:]+songs_order[0]
@@ -28,3 +28,9 @@ while button != 4:
         elif button==3:
             print('you have pressed button 3')
             songs_order=songs_order[1]+songs_order[0]+songs_order[2:]
+
+output =''
+for song in songs_order:
+    output += song + ' '
+
+print(output[:-1])
