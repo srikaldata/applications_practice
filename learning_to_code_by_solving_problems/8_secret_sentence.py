@@ -22,3 +22,9 @@ while char_idx< len(sentence):
     # if vowel, skipping the encoded chars to the actual chars
     if sentence[char_idx] in 'aeiou':
         char_idx+=3
+    
+    # if consonant,dont skip but just move to next char
+    else:
+        char_idx+=1
+
+print(result)
