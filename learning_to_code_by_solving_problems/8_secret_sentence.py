@@ -28,3 +28,21 @@ while char_idx< len(sentence):
         char_idx+=1
 
 print(result)
+
+# wrapping the logic in a fn
+def decode_sentence(sentence):
+    while char_idx< len(sentence):
+    
+        # adding each char to result
+        result += sentence[char_idx]
+        
+        # if vowel, skipping the encoded chars to the actual chars
+        if sentence[char_idx] in 'aeiou':
+            char_idx+=3
+        
+        # if consonant,dont skip but just move to next char
+        else:
+            char_idx+=1
+
+    print(result)
+
