@@ -24,3 +24,7 @@ while button != 4:
         elif button ==2:
             print('you have pressed button 2')
             songs_order=songs_order[-1]+songs_order[:-1]
+        
+        elif button==3:
+            print('you have pressed button 3')
+            songs_order=songs_order[1]+songs_order[0]+songs_order[2:]
