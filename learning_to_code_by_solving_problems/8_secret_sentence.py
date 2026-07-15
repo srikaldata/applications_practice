@@ -18,3 +18,7 @@ while char_idx< len(sentence):
     
     # adding each char to result
     result += sentence[char_idx]
+    
+    # if vowel, skipping the encoded chars to the actual chars
+    if sentence[char_idx] in 'aeiou':
+        char_idx+=3
