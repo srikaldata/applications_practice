@@ -12,3 +12,9 @@ sentence = 'ipi lipikepe yopoupu'
 result = ''
 char_idx = 0
 
+
+# looping through each of the character in the sentence
+while char_idx< len(sentence):
+    
+    # adding each char to result
+    result += sentence[char_idx]
