@@ -15,3 +15,6 @@ for _ in range(num_villages):
 
 # sorting from small to large
 village_positions.sort()
+
+# initializing village size
+min_village_size = float(1000000000)
