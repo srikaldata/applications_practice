@@ -11,11 +11,14 @@
 # setting the constant
 cost_per_student_diff_yrs = [12, 10, 7, 5]
 
+
 # getting the inputs
 for _ in range(10):
     trip_cost = int(input('cost of the trip in $: '))
     student_proportions_yrs = input('student proportions in each of 4 years (separate each using a space) (MUST TOTAL TO 1.0): ').split()
     num_students=int(input('number of students: '))
+    # if cost per student needs to be varied for each iteration 
+    cost_per_student_diff_yrs = input('brunch cost per student in each of 4 years (separate each using a space): ').split()
     
     # converting list of strings to list of floats
     for prop_idx in range(len(student_proportions_yrs)):
