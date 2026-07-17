@@ -17,5 +17,9 @@ for _ in range(10):
     student_proportions_yrs = input('student proportions in each of 4 years (separate each using a space): ').split()
     num_students=int(input('number of students: '))
     
+    # converting list of strings to list of floats
+    for prop_idx in range(len(student_proportions_yrs)):
+        student_proportions_yrs[prop_idx] = float(student_proportions_yrs[prop_idx])
+    
     print(trip_cost, student_proportions_yrs, num_students, sep='\n\n')
 
