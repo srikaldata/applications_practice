@@ -22,4 +22,11 @@ for _ in range(10):
         student_proportions_yrs[prop_idx] = float(student_proportions_yrs[prop_idx])
     
     print(trip_cost, student_proportions_yrs, num_students, sep='\n\n')
+    
+    # calculating the num of students in each year using proportion
+    students_yrs = []
+    
+    for prop in student_proportions_yrs:
+        students_yrs.append(int(prop*num_students))
+        
 
