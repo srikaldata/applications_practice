@@ -36,4 +36,8 @@ for _ in range(10):
         
     print('total amount raised: ', total_amt_raised)
     
-
+    # finding if it would cover the trip cost
+    if total_amt_raised/2 < trip_cost:
+        print('YES')
+    else:
+        print('NO')
