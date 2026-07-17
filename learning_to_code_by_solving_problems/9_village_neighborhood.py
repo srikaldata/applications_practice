@@ -18,3 +18,16 @@ village_positions.sort()
 
 # initializing village size
 min_village_size = float(1000000000)
+
+# calculating the minimum size of each village
+for i in range(1, num_villages-1):
+    left_limit = (village_positions[i]-village_positions[i-1])/2
+    right_limit= (village_positions[i+1]-village_positions[i])/2
+    
+    village_size = left_limit + right_limit
+    
+    # updating previous minimum village size
+    if village_size < min_village_size:
+        min_village_size=village_size
+
+print(min_village_size)
