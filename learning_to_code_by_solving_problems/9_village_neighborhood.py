@@ -13,3 +13,5 @@ village_positions = []
 for _ in range(num_villages):
     village_positions.append(int(input('position of the village:')))
 
+# sorting from small to large
+village_positions.sort()
