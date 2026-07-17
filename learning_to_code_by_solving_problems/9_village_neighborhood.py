@@ -36,6 +36,8 @@ print(min_village_size)
 def calc_min_village_size(num_villages, village_positions):
     # initializing village size
     min_village_size = float(1000000000)
+    
+    print('calculating min village size...')
 
     # calculating the minimum size of each village
     for i in range(1, num_villages-1):
@@ -49,4 +51,12 @@ def calc_min_village_size(num_villages, village_positions):
             min_village_size=village_size
 
     print(min_village_size)
-    
+    print()
+
+# testing the function with different use cases
+calc_min_village_size(5, [1,2,3,4,5])
+calc_min_village_size(2, [10,20])
+calc_min_village_size(2, [100000000,199999999])
+calc_min_village_size(3, [9,9999, 99999999])
+calc_min_village_size(5, [1, 10, 100, 1000, 10000])
+calc_min_village_size(12, [1000000, 1000001, 1000002, 1000003, 1000004, 1000005, 1000006, 1000007, 1000008, 1000009, 1000010, 1000011])
