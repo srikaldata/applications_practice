@@ -55,3 +55,30 @@ def get_inputs():
     cost_per_student_diff_yrs = [int(x) for x in input('brunch cost per student in each of 4 years (separate each using a space): ').split()]
     
     return trip_cost , student_proportions_yrs, num_students, cost_per_student_diff_yrs
+
+def will_amt_cover_trip(trip_cost , student_proportions_yrs, num_students, cost_per_student_diff_yrs):
+    # converting list of strings to list of floats
+    for prop_idx in range(len(student_proportions_yrs)):
+        student_proportions_yrs[prop_idx] = float(student_proportions_yrs[prop_idx])
+    
+    print(trip_cost, student_proportions_yrs, num_students, sep='\n\n')
+    
+    # calculating the num of students in each year using proportion
+    students_each_yr = []
+    
+    for prop in student_proportions_yrs:
+        students_each_yr.append(int(prop*num_students))
+        
+    # calculating the total amount raised from brunch 
+    total_amt_raised = 0
+    for idx in range(len(students_each_yr)):
+        total_amt_raised= total_amt_raised + (students_each_yr[idx] * cost_per_student_diff_yrs[idx])
+        
+    print('total amount raised: ', total_amt_raised)
+    
+    # finding if it would cover the trip cost
+    if total_amt_raised/2 < trip_cost:
+        print('YES')
+    else:
+        print('NO')
+
