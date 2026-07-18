@@ -83,3 +83,4 @@ def will_amt_cover_trip(trip_cost , student_proportions_yrs, num_students, cost_
         print('NO')
 
 print(get_inputs())
+print(will_amt_cover_trip(*get_inputs()))
