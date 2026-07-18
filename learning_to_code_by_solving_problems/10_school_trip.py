@@ -15,12 +15,12 @@ cost_per_student_diff_yrs = [12, 10, 7, 5]
 # getting the inputs
 for _ in range(10):
     trip_cost = int(input('cost of the trip in $: '))
-    student_proportions_yrs = input('student proportions in each of 4 years (separate each using a space) (MUST TOTAL TO 1.0): ').split()
+    student_proportions_yrs = [float(x) for x in input('student proportions in each of 4 years (separate each using a space) (MUST TOTAL TO 1.0): ').split()]
     num_students=int(input('number of students: '))
     # if cost per student needs to be varied for each iteration 
-    cost_per_student_diff_yrs = input('brunch cost per student in each of 4 years (separate each using a space): ').split()
-    
-    # converting list of strings to list of floats
+    cost_per_student_diff_yrs = [int(x) for x in input('brunch cost per student in each of 4 years (separate each using a space): ').split()]
+   
+   # converting list of strings to list of floats
     for prop_idx in range(len(student_proportions_yrs)):
         student_proportions_yrs[prop_idx] = float(student_proportions_yrs[prop_idx])
     
@@ -35,7 +35,7 @@ for _ in range(10):
     # calculating the total amount raised from brunch 
     total_amt_raised = 0
     for idx in range(len(students_each_yr)):
-        total_amt_raised= total_amt_raised + (students_each_yr[idx], cost_per_student_diff_yrs[idx])
+        total_amt_raised= total_amt_raised + (students_each_yr[idx] * cost_per_student_diff_yrs[idx])
         
     print('total amount raised: ', total_amt_raised)
     
@@ -43,4 +43,15 @@ for _ in range(10):
     if total_amt_raised/2 < trip_cost:
         print('YES')
     else:
-        print('NO')
+        print('NO') 
+    
+
+# wrapping the logic into functions
+def get_inputs():
+    trip_cost = int(input('cost of the trip in $: '))
+    student_proportions_yrs = [float(x) for x in input('student proportions in each of 4 years (separate each using a space) (MUST TOTAL TO 1.0): ').split()]
+    num_students=int(input('number of students: '))
+    # if cost per student needs to be varied for each iteration 
+    cost_per_student_diff_yrs = [int(x) for x in input('brunch cost per student in each of 4 years (separate each using a space): ').split()]
+    
+    return trip_cost , student_proportions_yrs, num_students, cost_per_student_diff_yrs
