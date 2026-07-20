@@ -84,3 +84,21 @@ def will_amt_cover_trip(trip_cost , student_proportions_yrs, num_students, cost_
 
 print(get_inputs())
 print(will_amt_cover_trip(*get_inputs()))
+
+
+# second way to solve the problem
+# getting the inputs
+for _ in range(10):
+    trip_cost = int(input('cost of the trip in $: '))
+    student_proportions_yrs = [float(x) for x in input('student proportions in each of 4 years (separate each using a space) (MUST TOTAL TO 1.0): ').split()]
+    num_students=int(input('number of students: '))
+    # if cost per student needs to be varied for each iteration 
+    cost_per_student_diff_yrs = [int(x) for x in input('brunch cost per student in each of 4 years (separate each using a space): ').split()]
+    
+    # calculating the num of students in each year using proportion
+    students_each_yr = []
+    
+    for prop in student_proportions_yrs:
+        students_each_yr.append(int(prop*num_students))
+    
+    counted_students = sum(students_each_yr)
