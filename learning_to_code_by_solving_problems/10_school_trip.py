@@ -102,3 +102,5 @@ for _ in range(10):
         students_each_yr.append(int(prop*num_students))
     
     counted_students = sum(students_each_yr)
+    uncounted_students = num_students - counted_students
+    
