@@ -104,4 +104,5 @@ for _ in range(10):
     counted_students = sum(students_each_yr)
     uncounted_students = num_students - counted_students
     max_students_yr_idx = students_each_yr.index(max(students_each_yr))
-    
+    students_each_yr[max_students_yr_idx] = students_each_yr[max_students_yr_idx] + uncounted_students
+
