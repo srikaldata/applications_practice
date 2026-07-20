@@ -105,4 +105,16 @@ for _ in range(10):
     uncounted_students = num_students - counted_students
     max_students_yr_idx = students_each_yr.index(max(students_each_yr))
     students_each_yr[max_students_yr_idx] = students_each_yr[max_students_yr_idx] + uncounted_students
+    
+    total_amt_raised = 0
+    for idx in range(len(students_each_yr)):
+        total_amt_raised= total_amt_raised + (students_each_yr[idx] * cost_per_student_diff_yrs[idx])
+    
+    print('total amount raised: ', total_amt_raised)
+    
+    # finding if it would cover the trip cost
+    if total_amt_raised/2 < trip_cost:
+        print('YES')
+    else:
+        print('NO')
 
