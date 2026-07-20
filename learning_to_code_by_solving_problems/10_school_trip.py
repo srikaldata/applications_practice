@@ -101,6 +101,7 @@ for _ in range(10):
     for prop in student_proportions_yrs:
         students_each_yr.append(int(prop*num_students))
     
+    # if the number of students are excluded when splitting proportions, adding the remaining students to the year with max students
     counted_students = sum(students_each_yr)
     uncounted_students = num_students - counted_students
     max_students_yr_idx = students_each_yr.index(max(students_each_yr))
